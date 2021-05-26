@@ -1,4 +1,4 @@
-function App() {
+const App = () => {
   return (
     <div className='container mx-auto'>
       <header className='flex justify-center items-center text-3xl h-32 mx-5'>
@@ -7,6 +7,6 @@ function App() {
       <div className='flex justify-center'>content</div>
     </div>
   );
-}
+};
 
 export default App;
