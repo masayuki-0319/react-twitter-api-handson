@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import InputForm from './InputForm';
+import ImageTable from './ImageTable';
 
 type typeImageTableState = {
   images: typeImages;
@@ -10,7 +11,7 @@ type typeImageTableState = {
 
 type typeImages = {
   url: string[];
-  height: string[];
+  height: number[];
   source: string[];
   max_id: string;
 };
@@ -54,6 +55,7 @@ class MainTable extends React.Component<{}, typeImageTableState> {
         <InputForm
           onSubmit={(screen_name: string) => this.handleSubmit(screen_name)}
         />
+        <ImageTable images={this.state.images} />
         <div className='box h-64 text-center m-5 p-4 ...'>
           {this.state.message}
         </div>
